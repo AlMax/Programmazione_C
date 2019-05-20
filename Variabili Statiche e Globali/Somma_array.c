@@ -61,7 +61,7 @@ int main(void){
 }
 
 int valore_minimo(int a[], int b[], int indiciA[], int indiciB[], int DIM){
-  int minimoA, indiceA, minimoB, indiceB;
+  int minimoA=DIM^DIM, indiceA, minimoB=DIM^DIM, indiceB;
   int static kA = 0, kB = 0;
   int bool=1;
 
@@ -103,15 +103,16 @@ int valore_minimo(int a[], int b[], int indiciA[], int indiciB[], int DIM){
 
     if( bool == 1 ){
 
-      minimoA = a[i];
-      minimoB = b[i];
-
-      if( minimoA > a[i] ){
-        minimoA = a[i];
+      if( minimoA > a[i+1] ){
+        minimoA = a[i+1];
+        indiceA = i+1;
+      } else {
         indiceA = i;
       }
-      if( minimoB > b[i] ){
-        minimoB = b[i];
+      if( minimoB > b[i+1] ){
+        minimoB = b[i+1];
+        indiceB = i+1;
+      } else {
         indiceB = i;
       }
 
