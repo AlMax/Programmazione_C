@@ -26,8 +26,8 @@ int main(void){
     printf("[%i]:%i ", i, array[i]);
   } //Stampa
 
-  printf("\nNumeri Verificati\n");
-  verifica(array,DIM);
+  printf("\n\nNumeri Verificati\n");
+  verifica(array);
 
   return 0;
 }
@@ -43,7 +43,7 @@ void verifica(int array[]){
     }
 
     if(array[i] > somma){
-      printf("[%i]:%i ", i, array[i]);
+      printf("[%i]:%i \n", i, array[i]);
     }
 
   }
