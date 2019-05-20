@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <time.h>
 
-void verifica(int array[], int length); //Stampa i numeri che sono maggiori o uguali alla somma dei numeri successivi nell'array
+void verifica(int array[]); //Stampa i numeri che sono maggiori o uguali alla somma dei numeri successivi nell'array
 
 int DIM=100;
 
@@ -32,7 +32,7 @@ int main(void){
   return 0;
 }
 
-void verifica(int array[], int length){
+void verifica(int array[]){
   int somma;
 
   for( int i = 0 ; i < DIM-1 ; i++ ){
