@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <time.h>
 
-int verifica_crescente(int array[], int length);
-int verifica_decrescente(int array[], int length);
-void massimo_crescente(int array[], int length);
+int verifica_crescente(int array[]);
+int verifica_decrescente(int array[]);
+void massimo_crescente(int array[]);
 
 int DIM=100;
 
@@ -28,14 +28,14 @@ int main(void){
     printf("[%i]:%i ", i, array[i]);
   } //Stampa
 
-  verifica_crescente(array,DIM);
-  verifica_decrescente(array,DIM);
-  massimo_crescente(array,DIM);
+  verifica_crescente(array);
+  verifica_decrescente(array);
+  massimo_crescente(array);
 
   return 0;
 }
 
-int verifica_crescente(int array[], int length){
+int verifica_crescente(int array[]){
 
   for( int i = 0 ; i < DIM-3 ; i++ ){
 
@@ -54,7 +54,7 @@ int verifica_crescente(int array[], int length){
   return 0;
 }
 
-int verifica_decrescente(int array[], int length){
+int verifica_decrescente(int array[]){
 
   for( int i = 0 ; i < DIM-3 ; i++ ){
 
@@ -73,7 +73,7 @@ int verifica_decrescente(int array[], int length){
   return 0;
 }
 
-void massimo_crescente(int array[], int length){
+void massimo_crescente(int array[]){
 
   int max = 0;
   int count = 0;
