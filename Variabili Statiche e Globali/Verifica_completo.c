@@ -62,7 +62,7 @@ int verifica_decrescente(int array[]){
 
         if( array[i+1] > array[i+2] ){
 
-          printf("\nVerificata sequenza da 3 decrescente; Indice: %i, Primo: %i, Secondo: %i, Terzo: %i\n", i, array[i], array[i+1], array[i+2]);
+          printf("\nVerificata sequenza da 3 decrescente; Indice: %i, Primo: %i, Secondo: %i, Terzo: %i\n", i, array[i], array[i+1], array[i+2]); 
           return 1;
 
         }
