@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
 #include "Punto.h"
 #include "Rettangolo.h"
 
@@ -40,6 +41,7 @@ struct rettangolo crea_rettangolo(struct punto a, struct punto b){
   }
 
   printf("Il vertice in alto a destra ha x=%.2lf e y=%.2lf, mentre il vertice in basso a sinistra ha x=%.2lf e y=%.2lf.", r.max.ascissa, r.max.ordinata, r.min.ascissa, r.min.ordinata);
+  printf("\nLa larghezza e': %.2lf e l'altezza e': %.2lf", larghezza_rettangolo(r), altezza_rettangolo(r));
 
   return r;
 
@@ -55,4 +57,12 @@ bool equals_rettangoli(struct rettangolo this, struct rettangolo that){
   if( ( (this.max.ascissa-this.min.ascissa) == (that.max.ascissa-that.min.ascissa) ) && ( (this.max.ordinata-this.min.ordinata) == (that.max.ordinata-that.min.ordinata) ) )
     return true;
   return false;
+}
+
+double larghezza_rettangolo(struct rettangolo this){
+  return abs(this.max.ascissa - this.min.ascissa);
+}
+
+double altezza_rettangolo(struct rettangolo this){
+  return abs(this.max.ordinata - this.min.ordinata);
 }

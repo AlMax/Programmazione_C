@@ -15,4 +15,8 @@ bool include(struct rettangolo this, struct rettangolo that);
 
 bool equals_rettangoli(struct rettangolo this, struct rettangolo that);
 
+double larghezza_rettangolo(struct rettangolo this);
+
+double altezza_rettangolo(struct rettangolo this);
+
 #endif
