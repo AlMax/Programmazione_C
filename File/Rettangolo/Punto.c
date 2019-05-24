@@ -13,3 +13,16 @@ struct punto inserisci_punto(){
 
   return p;
 }
+
+void stampa_punto(struct punto p){
+
+  printf("L'ascissa: %d \t", p.ascissa);
+
+  printf("L'ordinata: %d \t", p.ordinata);
+
+}
+
+bool equals_punti(struct punto a, struct punto b){
+  if( a.ascissa == b.ascissa && a.ordinata == b.ordinata )
+    return true;
+}

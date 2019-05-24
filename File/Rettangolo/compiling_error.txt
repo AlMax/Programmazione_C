@@ -1,0 +1,3 @@
+C:\Users\aliha\AppData\Local\Temp\cc2Gsnlp.o:Main.c:(.text+0x15): undefined reference to `inserisci_punto'
+C:\Users\aliha\AppData\Local\Temp\cc2Gsnlp.o:Main.c:(.text+0x31): undefined reference to `stampa_punto'
+collect2.exe: error: ld returned 1 exit status
