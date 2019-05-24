@@ -5,24 +5,30 @@
  #include "Rettangolo.h"
 
  int main(void){
-   struct punto p1, p2, p3, p4;
-   struct rettangolo r1, r2;
+   struct punto p1, p2;
+   struct rettangolo r[10];
 
-   printf("\n");
-   p1 = inserisci_punto();
-   p2 = inserisci_punto();
-   r1 = crea_rettangolo(p1, p2);
+   printf("\nINSERIMENTO DI 10 RETTANGOLI\n");
 
-   printf("\nRettangolo r1\n");
+   for( int k = 0 ; k < 10 ; k++ ) {
 
-   for( int i = 0 ; i <(r1.max.ordinata - r1.min.ordinata) ; i++ ) {
-     for( int j = 0 ; j < (r1.max.ascissa - r1.min.ascissa) ; j++ ) {
-       printf("* ");
-     }
      printf("\n");
+     p1 = inserisci_punto();
+     p2 = inserisci_punto();
+     r[k] = crea_rettangolo(p1, p2);
+
+     printf("\nRettangolo r%i\n", k);
+
+     for( int i = 0 ; i <(r[k].max.ordinata - r[k].min.ordinata) ; i++ ) {
+       for( int j = 0 ; j < (r[k].max.ascissa - r[k].min.ascissa) ; j++ ) {
+         printf("* ");
+       }
+       printf("\n");
+     }
+
    }
 
-   printf("\n");
+   /*printf("\n");
    p4 = inserisci_punto();
    p3 = inserisci_punto();
    r2 = crea_rettangolo(p3, p4);
@@ -37,6 +43,6 @@
    }
 
    printf("\n%s", include(r1, r2) ? "Il rettangolo r2 e' incluso in r1" : "Il rettangolo r2 NON e' incluso in r1" );
-   printf("\n%s\n", equals_rettangoli(r1, r2) ? "Il rettangolo r1 e' uguale ad r2" : "Il rettangolo r1 NON e' uguale ad r2" );
+   printf("\n%s\n", equals_rettangoli(r1, r2) ? "Il rettangolo r1 e' uguale ad r2" : "Il rettangolo r1 NON e' uguale ad r2" ); */
 
  }

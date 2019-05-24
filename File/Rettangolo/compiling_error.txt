@@ -1,3 +1,9 @@
-C:\Users\aliha\AppData\Local\Temp\cc2Gsnlp.o:Main.c:(.text+0x15): undefined reference to `inserisci_punto'
-C:\Users\aliha\AppData\Local\Temp\cc2Gsnlp.o:Main.c:(.text+0x31): undefined reference to `stampa_punto'
+C:\Users\aliha\AppData\Local\Temp\ccPdCQ42.o:Main.c:(.text+0x27): undefined reference to `inserisci_punto'
+C:\Users\aliha\AppData\Local\Temp\ccPdCQ42.o:Main.c:(.text+0x33): undefined reference to `inserisci_punto'
+C:\Users\aliha\AppData\Local\Temp\ccPdCQ42.o:Main.c:(.text+0x6a): undefined reference to `crea_rettangolo'
+C:\Users\aliha\AppData\Local\Temp\ccPdCQ42.o:Main.c:(.text+0x100): undefined reference to `inserisci_punto'
+C:\Users\aliha\AppData\Local\Temp\ccPdCQ42.o:Main.c:(.text+0x10c): undefined reference to `inserisci_punto'
+C:\Users\aliha\AppData\Local\Temp\ccPdCQ42.o:Main.c:(.text+0x142): undefined reference to `crea_rettangolo'
+C:\Users\aliha\AppData\Local\Temp\ccPdCQ42.o:Main.c:(.text+0x20e): undefined reference to `include'
+C:\Users\aliha\AppData\Local\Temp\ccPdCQ42.o:Main.c:(.text+0x281): undefined reference to `equals_rettangoli'
 collect2.exe: error: ld returned 1 exit status
