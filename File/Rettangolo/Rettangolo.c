@@ -39,7 +39,7 @@ struct rettangolo crea_rettangolo(struct punto a, struct punto b){
 
   }
 
-  printf("Il vertice in alto a destra ha x=%d e y=%d, mentre il vertice in basso a sinistra ha x=%d e y=%d.", r.max.ascissa, r.max.ordinata, r.min.ascissa, r.min.ordinata);
+  printf("Il vertice in alto a destra ha x=%.2lf e y=%.2lf, mentre il vertice in basso a sinistra ha x=%.2lf e y=%.2lf.", r.max.ascissa, r.max.ordinata, r.min.ascissa, r.min.ordinata);
 
   return r;
 

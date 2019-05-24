@@ -29,8 +29,8 @@
 
    printf("\nRettangolo r2\n");
 
-   for( int i = 0 ; i <(r2.max.ordinata - r2.min.ordinata) ; i++ ) {
-     for( int j = 0 ; j < (r2.max.ascissa - r2.min.ascissa) ; j++ ) {
+   for( int i = 0 ; i < (int) (r2.max.ordinata - r2.min.ordinata) ; i++ ) {
+     for( int j = 0 ; j < (int) (r2.max.ascissa - r2.min.ascissa) ; j++ ) {
        printf("* ");
      }
      printf("\n");

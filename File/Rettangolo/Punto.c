@@ -6,19 +6,19 @@ struct punto inserisci_punto(){
   struct punto p;
 
   printf("Inserisci l'ascissa: ");
-  scanf("%d", &p.ascissa);
+  scanf("%lf", &p.ascissa);
 
   printf("Inserisci l'ordinata: ");
-  scanf("%d", &p.ordinata);
+  scanf("%lf", &p.ordinata);
 
   return p;
 }
 
 void stampa_punto(struct punto p){
 
-  printf("L'ascissa: %d \t", p.ascissa);
+  printf("L'ascissa: %lf \t", p.ascissa);
 
-  printf("L'ordinata: %d \t", p.ordinata);
+  printf("L'ordinata: %lf \t", p.ordinata);
 
 }
 
