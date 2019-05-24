@@ -52,5 +52,7 @@ bool include(struct rettangolo this, struct rettangolo that){
 }
 
 bool equals_rettangoli(struct rettangolo this, struct rettangolo that){
-
+  if( ( (this.max.ascissa-this.min.ascissa) == (that.max.ascissa-that.min.ascissa) ) && ( (this.max.ordinata-this.min.ordinata) == (that.max.ordinata-that.min.ordinata) ) )
+    return true;
+  return false;
 }

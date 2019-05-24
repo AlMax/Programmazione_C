@@ -3,8 +3,8 @@
 #include <stdbool.h>
 
 struct punto {
-  double ascissa; //x
-  double ordinata; //y
+  int ascissa; //x
+  int ordinata; //y
 };
 
 struct punto inserisci_punto(void);
