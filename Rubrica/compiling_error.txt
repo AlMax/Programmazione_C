@@ -1,0 +1,20 @@
+D:\Linguaggio C\Programmazione_C\Rubrica\Contatto.c: In function 'stampa_contatto':
+D:\Linguaggio C\Programmazione_C\Rubrica\Contatto.c:28:93: warning: implicit declaration of function 'stampa_indirizzo'; did you mean 'inserisci_indirizzo'? [-Wimplicit-function-declaration]
+   printf("Nome: %s, Cognome: %s, Indirizzo: %s, Numero: %ld, Email: %s", c.nome, c.cognome, stampa_indirizzo(c), c.telefono, c.email);
+                                                                                             ^~~~~~~~~~~~~~~~
+                                                                                             inserisci_indirizzo
+D:\Linguaggio C\Programmazione_C\Rubrica\Contatto.c: At top level:
+D:\Linguaggio C\Programmazione_C\Rubrica\Contatto.c:51:7: error: conflicting types for 'stampa_indirizzo'
+ char* stampa_indirizzo(struct contatto c){
+       ^~~~~~~~~~~~~~~~
+D:\Linguaggio C\Programmazione_C\Rubrica\Contatto.c:28:93: note: previous implicit declaration of 'stampa_indirizzo' was here
+   printf("Nome: %s, Cognome: %s, Indirizzo: %s, Numero: %ld, Email: %s", c.nome, c.cognome, stampa_indirizzo(c), c.telefono, c.email);
+                                                                                             ^~~~~~~~~~~~~~~~
+D:\Linguaggio C\Programmazione_C\Rubrica\Contatto.c: In function 'stampa_indirizzo':
+D:\Linguaggio C\Programmazione_C\Rubrica\Contatto.c:54:3: warning: implicit declaration of function 'strcopy'; did you mean 'strcpy'? [-Wimplicit-function-declaration]
+   strcopy(indirizzo, "Via ");
+   ^~~~~~~
+   strcpy
+D:\Linguaggio C\Programmazione_C\Rubrica\Contatto.c:66:10: warning: function returns address of local variable [-Wreturn-local-addr]
+   return indirizzo;
+          ^~~~~~~~~
