@@ -7,7 +7,7 @@
 struct contatto inserisci_contatto(){
   struct contatto c;
 
-  printf("\nInserisci il Nome: ");
+  printf("Inserisci il Nome: ");
   scanf("%s", &c.nome);
 
   printf("Inserisci il Cognome: ");
