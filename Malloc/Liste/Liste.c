@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
 #include "Liste.h"
 
 struct list *new_list(){
@@ -25,16 +26,18 @@ void insert_on_tail(struct list *list, int value){
   node->value = value;
   node->next = NULL;
 
-  struct node *n = list->head;
-
-  while( n != NULL){
-    n = n->next;
+  if(list->head == NULL){
+    insert_on_head(list, value);
+  } else {
+    struct node *attuale = list->head;
+    while( attuale->next != NULL ){
+      attuale = attuale->next;
+    }
+    attuale->next = node;
   }
-
-  n = node;
 }
 
-void print(struct list *list){
+void print_list(struct list *list){
   if(list->head == NULL){
 		printf("La lista e' vuota\n");
 		return;
@@ -47,4 +50,42 @@ void print(struct list *list){
 		attuale = attuale->next;
 	}
 	printf("\n");
+}
+
+bool contains(struct list *list, int value){
+  struct node *n = list->head;
+  while( n != NULL ){
+    if( n->value == value ){
+      return true;
+    }
+    n = n->next;
+  }
+  return false;
+}
+
+void remove_from_list(struct list *list, int value){
+  struct node *attuale = list->head;
+  struct node *precedente = NULL;
+  while( attuale != NULL ){
+
+    if( attuale->value == value ){
+
+      if(attuale == list->head){
+        list->head = attuale->next;
+      } else {
+        precedente->next = attuale->next;
+      }
+      free(attuale);
+
+      return;
+    }
+
+    precedente = attuale;
+    attuale = attuale->next;
+
+  }
+}
+
+void empty_list(struct list *list){
+  list->head = NULL;
 }
